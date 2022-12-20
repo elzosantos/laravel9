@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     zip \
-    unzip
+    unzip \
+    npm
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -37,3 +38,4 @@ RUN pecl install -o -f redis \
 WORKDIR /var/www
 
 USER $user
+CMD /bin/bash
