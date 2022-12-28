@@ -11,7 +11,7 @@
                 Editar o usuário : {{ $users->name }}
             </div>
             <div class="p-3">
-                <form action="{{route('users.update', $users->id)}}" method="post">
+                <form action="{{route('users.update', $users->id)}}" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="_method" value="PUT">
                     @include('includes.validations-form') 
                     @include('users._partials.form')

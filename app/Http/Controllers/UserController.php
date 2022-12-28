@@ -7,6 +7,7 @@ use App\Models\User;
 use Dflydev\DotAccessData\Data;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use PhpParser\Builder\Function_;
 use PhpParser\Node\Expr\FuncCall;
 
@@ -43,7 +44,13 @@ class UserController extends Controller
     public function store(StoreUpdateUserFormRequest $request)
     {
         $data = $request->all();
+        if ($request->image) {
+            $extension = $request->image->getClientOriginalExtension();
+            $data['image'] = $request->image->storeAs('users', date('Y') . rand() . ".{$extension}");
+        }
+        
         $data['password'] = bcrypt($data['password']);
+ 
         $this->model->create($data);
         return redirect()->route('users.index');
     }
@@ -60,6 +67,14 @@ class UserController extends Controller
         if (!$users = $this->model->find($id))
             return redirect()->route('users.index');
         $data = $request->only('name', 'email');
+
+        if ($request->image) {
+            if (Storage::exists($users->image)) {
+                Storage::delete($users->image);
+            }
+            $extension = $request->image->getClientOriginalExtension();
+            $data['image'] = $request->image->storeAs('users', date('Y') . rand() . ".{$extension}");
+        }
         if ($request->password)
             $data['password'] = bcrypt($request->password);
         $users->update($data);

@@ -37,21 +37,34 @@
                     <table class="table-responsive w-full rounded">
                         <thead>
                             <tr>
+                                <th class="border w-1/7 px-4 py-2">#</th>
                                 <th class="border w-1/4 px-4 py-2">Nome</th>
                                 <th class="border w-1/6 px-4 py-2">E-mail</th>
                                 <th class="border w-1/7 px-4 py-2">Status</th>
+                                <th class="border w-1/7 px-4 py-2">Path</th>
                                 <th class="border w-1/5 px-4 py-2">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($users as $user)
                                 <tr>
-                                    <td class="border px-4 py-2">{{ $user->name }}</td>
+
+                                    <td class="border px-4 py-2">
+                                        @if ($user->image)
+                                            <img src="{{ url("storage/{$user->image}") }}" alt="{{ $user->name }}" class="w-10" >
+                                        @else
+                                            <img src="{{ url("images/login-new.jpeg") }}" alt="{{ $user->name }}" class="w-10">
+                                        @endif
+                                    </td>
+                                        <td class="border px-4 py-2">
+                                            {{ $user->name }}
+                                    </td>
                                     <td class="border px-4 py-2">{{ $user->email }}</td>
 
                                     <td class="border px-4 py-2">
                                         <i class="fas fa-check text-green-500 mx-2"></i>
                                     </td>
+                                    <td class="border px-4 py-2">{{ $user->image }}</td>
 
                                     <td class="border px-4 py-2">
                                         <a class="bg-teal-300 cursor-pointer rounded p-1 mx-1 text-white"
@@ -71,13 +84,12 @@
                                 </tr>
                             @endforeach
                         </tbody>
-                    </table>  
+                    </table>
 
                     <div class="py-4 p-3">
-                        {{$users->appends([
-                            'search' => request()->get('search', '')
-
-                        ])->links()}}
+                        {{ $users->appends([
+                                'search' => request()->get('search', ''),
+                            ])->links() }}
                     </div>
                     <div class="p-3">
                         <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
