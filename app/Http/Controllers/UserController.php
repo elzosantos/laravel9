@@ -21,6 +21,7 @@ class UserController extends Controller
     {
 
         $search = $request->search;
+      
         $users = $this->model->getUsers(
             search: $request->search ?? ''
         );

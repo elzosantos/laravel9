@@ -51,14 +51,21 @@
                 <ul class="list-reset flex flex-col">
                     
                     <li class=" w-full h-full py-3 px-2 border-b border-light-border bg-white">
-                        <a href="{{route('users.index')}}" 
+                        <a href="#" 
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fas fa-tachometer-alt float-left mx-2"></i>
+                            Administração 
+                        </a>
+                    </li>
+                    <li class=" w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="{{route('users.index')}}" 
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fab fa-wpforms float-left mx-2"></i>
                             Usuários 
                         </a>
                     </li>
                     <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                        <a href="{{route('users.index')}}"  
+                        <a href="{{route('cars.index', 4)}}"  
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fab fa-wpforms float-left mx-2"></i>
                             Meus Carros 
@@ -75,7 +82,7 @@
                         <a href="{{route('users.index' )}}" 
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fab fa-wpforms float-left mx-2"></i>
-                            Relatórios 
+                            Manutenção 
                         </a>
                     </li>
                     <li class="w-full h-full py-3 px-2 border-b border-light-border">
@@ -90,6 +97,13 @@
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                             <i class="fab fa-wpforms float-left mx-2"></i>
                             Compra e Venda 
+                        </a>
+                    </li>
+                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="{{route('users.index' )}}" 
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fab fa-wpforms float-left mx-2"></i>
+                            Lojas Parceiras
                         </a>
                     </li>
                      
