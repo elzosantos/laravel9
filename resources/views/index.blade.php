@@ -19,8 +19,8 @@
 <div class="container mx-auto h-full flex flex-1 justify-center items-center">
   <div class="w-full max-w-lg">
     <div class="leading-loose">
-      <form class="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
-        <p class="text-gray-800 font-medium text-center text-lg font-bold">Login - Car Track</p>
+      <form class="max-w-xl m-4 p-10 bg-white rounded shadow-xl" action="/users" method="GET">
+        <p class="text-gray-800 font-medium text-center text-lg font-bold">Login - Car Log</p>
         <div class="">
           <label class="block text-sm text-gray-00" for="username">Usuário</label>
           <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="username" name="username" type="text" required="" placeholder="Usuário" aria-label="username">
