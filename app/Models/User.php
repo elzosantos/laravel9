@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'image'
     ];
 
     /**
@@ -51,7 +52,7 @@ class User extends Authenticatable
             }
         })
         ->with('cars')
-        ->paginate(1);
+        ->paginate(10);
         return $users;
 
     }

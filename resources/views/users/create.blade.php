@@ -11,7 +11,7 @@
                 Novo Usuário
             </div>
             <div class="p-3">
-                <form class="w-full" action="{{route('users.store')}}" method="post">
+                <form class="w-full" action="{{route('users.store')}}" method="post" enctype="multipart/form-data">
                     @include('includes.validations-form') 
                     @include('users._partials.form')
 

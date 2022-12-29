@@ -29,11 +29,16 @@ class StoreUpdateUserFormRequest extends FormRequest
                 'required',
                 'email',
                 'unique:users,email,{$id},id'              
-            ],
+            ], 
             'password' => [
                 'required',
                 'min:6',
                 'max:15'    
+            ],
+            'image'=>[
+                'nullable',
+                'image',
+                'max:1024' //1MB
             ]
             //
         ];

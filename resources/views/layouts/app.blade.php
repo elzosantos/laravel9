@@ -36,7 +36,13 @@
                           <li><a href="#" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Minha Conta</a></li>
                           <li><a href="#" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Mensagens</a></li>
                           <li><hr class="border-t mx-2 border-grey-ligght"></li>
-                          <li><a href="#" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Sair</a></li>
+                          <li>
+                            <form action="{{ route ('logout')}}" method="POST">
+                            @csrf
+                            <button class="no-underline px-4 py-2 block text-black hover:bg-grey-light" type="submit">Sair</button>
+                            </form>
+                            
+                             </li>
                         </ul>
                     </div>
                 </div>
@@ -134,5 +140,4 @@
 
 </html>
 
- 
  
