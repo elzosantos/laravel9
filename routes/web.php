@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
  
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admin\CarController;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
  
 Route::delete('users/cars/{id}', [CarController::class, 'destroy'])->name('cars.destroy');
@@ -21,6 +22,8 @@ Route::get('/users', [UserController::class, 'index'])->name('users.index');
 Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
 Route::post('/users', [UserController::class, 'store'])->name('users.store');
 Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
+
+Route::get('/sendmail', [MailController::class, 'index'])->name('mail.index');
 
 /*
 |--------------------------------------------------------------------------

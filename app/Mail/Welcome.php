@@ -2,25 +2,28 @@
 
 namespace App\Mail;
 
+use Dotenv\Repository\AdapterRepository;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class MailNotify extends Mailable
+class Welcome extends Mailable
 {
     use Queueable, SerializesModels;
 
+    protected $data;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data)
     {
-        //
+        $this->data = $data;
     }
 
     /**
@@ -30,8 +33,11 @@ class MailNotify extends Mailable
      */
     public function envelope()
     {
-        return new Envelope(
-            subject: 'Mail Notify',
+        return new Envelope( 
+            subject: 'Boas Vindas',
+            replyTo: [
+                    new Address('suporte.mycar@gmail.com', 'My Car - Brasil')
+            ]
         );
     }
 
@@ -42,8 +48,13 @@ class MailNotify extends Mailable
      */
     public function content()
     {
+        
         return new Content(
-            view: 'view.name',
+            view: 'emails.welcome',
+            text: 'emails.welcome-text',
+            with:[
+                    'data' => $this->data
+            ]
         );
     }
 

@@ -47,10 +47,8 @@ class UserController extends Controller
         if ($request->image) {
             $extension = $request->image->getClientOriginalExtension();
             $data['image'] = $request->image->storeAs('users', date('Y') . rand() . ".{$extension}");
-        }
-        
-        $data['password'] = bcrypt($data['password']);
- 
+        } 
+        $data['password'] = bcrypt($data['password']); 
         $this->model->create($data);
         return redirect()->route('users.index');
     }
