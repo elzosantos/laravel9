@@ -36,7 +36,13 @@
                           <li><a href="#" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Minha Conta</a></li>
                           <li><a href="#" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Mensagens</a></li>
                           <li><hr class="border-t mx-2 border-grey-ligght"></li>
-                          <li><a href="#" class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Sair</a></li>
+                          <li>
+                            <form action="{{ route ('logout')}}" method="POST">
+                            @csrf
+                            <button class="no-underline px-4 py-2 block text-black hover:bg-grey-light" type="submit">Sair</button>
+                            </form>
+                            
+                             </li>
                         </ul>
                     </div>
                 </div>
@@ -92,7 +98,13 @@
                             Tabela Fipe 
                         </a>
                     </li>
-                 
+                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="{{route('users.index' )}}" 
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fab fa-wpforms float-left mx-2"></i>
+                            Compra e Venda 
+                        </a>
+                    </li>
                     <li class="w-full h-full py-3 px-2 border-b border-light-border">
                         <a href="{{route('users.index' )}}" 
                            class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
@@ -128,5 +140,4 @@
 
 </html>
 
- 
  
