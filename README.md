@@ -1,7 +1,6 @@
 
-# Setup Docker Para Projetos Laravel
-[Assine a Academy, e Seja VIP!](https://academy.especializati.com.br)
-
+# Laravel project
+ 
 ### Passo a passo
 Clone Repositório
 ```sh
