@@ -9,6 +9,7 @@ use App\Models\{
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUpdateCarRequest;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 class CarController extends Controller
 {
@@ -37,7 +38,7 @@ class CarController extends Controller
     public function associate(Request $request)
     {
 
-        dd($request);
+        dd(AuthenticatedSessionController::class()->username);
         if (!$user = $this->user->find($request)) {
             return redirect()->back();
         }
