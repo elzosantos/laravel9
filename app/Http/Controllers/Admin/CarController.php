@@ -24,7 +24,7 @@ class CarController extends Controller
     }
 
     public function index(Request $request, $userId)
-    {
+    { 
         if (!$user = $this->user->find($userId)) {
             return redirect()->back();
         }
@@ -38,7 +38,7 @@ class CarController extends Controller
     public function associate(Request $request)
     {
 
-        dd(AuthenticatedSessionController::class()->username);
+      //  dd(AuthenticatedSessionController::class()->username);
         if (!$user = $this->user->find($request)) {
             return redirect()->back();
         }
