@@ -36,12 +36,9 @@
                         <div id="ProfileDropDown"
                             class="rounded hidden shadow-md bg-white absolute pin-t mt-12 mr-1 pin-r">
                             <ul class="list-reset">
-                                <li><a href="#"
+                                <li><a href="{{ route('users.edit', 1) }}"
                                         class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Minha
                                         Conta</a></li>
-                                <li><a href="#"
-                                        class="no-underline px-4 py-2 block text-black hover:bg-grey-light">Mensagens</a>
-                                </li>
                                 <li>
                                     <hr class="border-t mx-2 border-grey-ligght">
                                 </li>
@@ -67,13 +64,7 @@
 
                     <ul class="list-reset flex flex-col">
 
-                        <li class=" w-full h-full py-3 px-2 border-b border-light-border bg-white">
-                            <a href="#"
-                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                                <i class="fas fa-tachometer-alt float-left mx-2"></i>
-                                Administração
-                            </a>
-                        </li>
+                        
                         <li class=" w-full h-full py-3 px-2 border-b border-light-border">
                             <a href="{{ route('users.index') }}"
                                 class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
@@ -89,49 +80,49 @@
                             </a>
                         </li>
                         <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="{{ route('cars.index', 4) }}"
+                            <a href="{{ route('cars.index') }}"
                                 class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                                 <i class="fab fa-wpforms float-left mx-2"></i>
                                 Meus Carros
                             </a>
                         </li>
                         <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="{{ route('users.index') }}"
+                            <a href="{{ route('histories.index') }}"
                                 class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                                 <i class="fab fa-wpforms float-left mx-2"></i>
                                 Meu Historico
                             </a>
                         </li>
                         <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="{{ route('users.index') }}"
+                            <a href="{{ route('maintenance.index') }}"
                                 class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                                 <i class="fab fa-wpforms float-left mx-2"></i>
                                 Manutenção
                             </a>
                         </li>
                         <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="{{ route('users.index') }}"
+                            <a href="{{ route('fipe.index') }}"
                                 class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                                 <i class="fab fa-wpforms float-left mx-2"></i>
                                 Tabela Fipe
                             </a>
                         </li>
                         <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="{{ route('users.index') }}"
+                            <a href="{{ route('business.index') }}"
                                 class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                                 <i class="fab fa-wpforms float-left mx-2"></i>
                                 Compra e Venda
                             </a>
                         </li>
                         <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="{{ route('users.index') }}"
+                            <a href="{{ route('partners.index') }}"
                                 class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                                 <i class="fab fa-wpforms float-left mx-2"></i>
                                 Lojas Parceiras
                             </a>
                         </li>
                         <li class="w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="{{ route('users.index') }}"
+                            <a href="{{ route('consultants.index') }}"
                                 class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
                                 <i class="fab fa-wpforms float-left mx-2"></i>
                                 Consultoria

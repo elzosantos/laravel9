@@ -6,6 +6,12 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admin\CarController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\BusinessController;
+use App\Http\Controllers\ConsultancyController;
+use App\Http\Controllers\FipeController;
+use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\MaintenanceController;
+use App\Http\Controllers\PartnerController; 
 use Illuminate\Support\Facades\Route;
  
 Route::delete('users/cars/{id}', [CarController::class, 'destroy'])->name('cars.destroy');
@@ -27,6 +33,12 @@ Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
 
 Route::get('/brands', [BrandController::class, 'index'])->name('brands.index');
 
+Route::get('/business', [BusinessController::class, 'index'])->name('business.index');
+Route::get('/consultants', [ConsultancyController::class, 'index'])->name('consultants.index');
+Route::get('/fipe', [FipeController::class, 'index'])->name('fipe.index');
+Route::get('/maintenance', [MaintenanceController::class, 'index'])->name('maintenance.index');
+Route::get('/history', [HistoryController::class, 'index'])->name('histories.index');
+Route::get('/partners', [PartnerController::class, 'index'])->name('partners.index');
 
 Route::get('/sendmail', [MailController::class, 'index'])->name('mail.index');
 

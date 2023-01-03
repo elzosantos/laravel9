@@ -20,7 +20,6 @@ class MailController extends Controller
         ];
 
         try {
-
             
             Mail::to('elzo.santos.sousa@gmail.com')->send(new Welcome($data));
             return response()->json(['Ok! Olhe seu email.']);
