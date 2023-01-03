@@ -33,6 +33,22 @@ class CarController extends Controller
             ->get();
         return view('cars.index', compact('user', 'cars'));
     }
+
+    public function associate(Request $request)
+    {
+
+        dd($request);
+        if (!$user = $this->user->find($request)) {
+            return redirect()->back();
+        }
+
+        $cars = $user->cars()
+            ->where('name', 'LIKE', "%$request->search%")
+            ->get();
+        return view('cars.index', compact('user', 'cars'));
+    }
+
+
     public function create($userId)
     {
         if (!$user = $this->user->find($userId)) {

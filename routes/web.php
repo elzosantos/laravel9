@@ -21,6 +21,7 @@ Route::put('users/cars/{id}', [CarController::class, 'update'])->name('cars.upda
 Route::get('users/{user}/cars/{id}', [CarController::class, 'edit'])->name('cars.edit');
 Route::get('users/{id}/cars', [CarController::class, 'index'])->name('cars.index');
 Route::get('users/cars/{id}', [CarController::class, 'show'])->name('cars.show');
+Route::get('users/cars', [CarController::class, 'associate'])->name('cars.associate');
 
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
