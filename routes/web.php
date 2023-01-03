@@ -41,7 +41,10 @@ Route::get('/maintenance', [MaintenanceController::class, 'index'])->name('maint
 Route::get('/history', [HistoryController::class, 'index'])->name('histories.index');
 Route::get('/partners', [PartnerController::class, 'index'])->name('partners.index');
 
+Route::get('/fipe/crawler', [FipeController::class, 'crawler'])->name('fipe.crawler');
+
 Route::get('/sendmail', [MailController::class, 'index'])->name('mail.index');
+
 
 /*
 |--------------------------------------------------------------------------

@@ -10,4 +10,8 @@ class FipeController extends Controller
     {  
         return view('fipe.index');
     }
+    public function crawler()
+    {  
+        return view('fipe.crawler');
+    }
 }
