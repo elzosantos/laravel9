@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUpdateCarRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use Illuminate\Support\Facades\Auth;
 
 class CarController extends Controller
 {
@@ -37,9 +38,9 @@ class CarController extends Controller
 
     public function associate(Request $request)
     {
-
+         
       //  dd(AuthenticatedSessionController::class()->username);
-        if (!$user = $this->user->find($request)) {
+        if (!$user = $this->user->find(Auth::user()->id)) {
             return redirect()->back();
         }
 
