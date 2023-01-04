@@ -39,7 +39,16 @@ Route::get('/consultants', [ConsultancyController::class, 'index'])->name('consu
 Route::get('/fipe', [FipeController::class, 'index'])->name('fipe.index');
 Route::get('/maintenance', [MaintenanceController::class, 'index'])->name('maintenance.index');
 Route::get('/history', [HistoryController::class, 'index'])->name('histories.index');
+
+ 
+Route::delete('/partners/{id}', [PartnerController::class, 'destroy'])->name('partners.destroy');
+Route::put('/partners/{id}', [PartnerController::class, 'update'])->name('partners.update');
+Route::get('/partners/{id}/edit', [PartnerController::class, 'edit'])->name('partners.edit');
 Route::get('/partners', [PartnerController::class, 'index'])->name('partners.index');
+Route::get('/partners/create', [PartnerController::class, 'create'])->name('partners.create');
+Route::post('/partners', [PartnerController::class, 'store'])->name('partners.store');
+Route::get('/partners/{id}', [PartnerController::class, 'show'])->name('partners.show');
+
 
 Route::get('/fipe/crawler', [FipeController::class, 'crawler'])->name('fipe.crawler');
 

@@ -45,7 +45,7 @@
                             </div>
                             <div class="text-center px-3 pb-6 pt-2">
                                 <h3 class="text-black text-sm bold font-sans">João Silva</h3>
-                                <p class="mt-2 font-sans font-light text-grey-700">Brasília - DF, consultor experiênte!</p>
+                                <p class="mt-2 font-sans font-light text-grey-700">Brasília - DF, consultor experiente!</p>
                             </div>
                             <div class="flex justify-center pb-3 text-grey-dark">
                                 <div class="text-center mr-3 border-r pr-3">
