@@ -52,7 +52,6 @@ class UserController extends Controller
         $this->model->create($data);
         return redirect()->route('users.index');
     }
-
     public function edit($id)
     {
         if (!$users = $this->model->find($id))
