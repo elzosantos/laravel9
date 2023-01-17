@@ -1,4 +1,6 @@
 <?php
+ 
+
 header("Content-Type: application/json; charset=utf-8");
 
 function FipeJson($resource, $data = null) {
@@ -23,21 +25,32 @@ function FipeJson($resource, $data = null) {
   return json_encode($output);
 }
 
-$tabela_referencia = FipeJson("ConsultarTabelaDeReferencia");
-// echo json_decode($tabela_referencia);
-
+// $tabela_referencia = FipeJson("ConsultarTabelaDeReferencia");
+// echo  json_decode($tabela_referencia);
 $marcas = FipeJson("ConsultarMarcas", array(
   "codigoTabelaReferencia" => 293,
   "codigoTipoVeiculo" => 1
 )); 
- //echo json_decode($marcas);
+$arrayMarcas = json_decode(json_decode($marcas), true);
+foreach (  $arrayMarcas as $marca ) {
+  $modelos = FipeJson("ConsultarModelos", array(
+    "codigoTabelaReferencia" => 293,
+    "codigoTipoVeiculo" => 1,
+    "codigoMarca" => $marca['Value'],
+  ));
+  var_dump($modelos);
+  flush();
+  
+ 
+}
 
+/*
 $modelos = FipeJson("ConsultarModelos", array(
   "codigoTabelaReferencia" => 231,
   "codigoTipoVeiculo" => 1,
   "codigoMarca" => 26,
 ));
-// echo json_decode($modelos);
+// echo json_decode($modelos);*/
 
 $ano_modelo = FipeJson("ConsultarAnoModelo", array(
   "codigoTabelaReferencia" => 231,
