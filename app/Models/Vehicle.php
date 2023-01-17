@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Vehicle extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'brand_id', 
+    ];
+    protected $casts = [
+        'created_at' => 'datetime',
+        'update_at' => 'datetime',
+    ];
 }

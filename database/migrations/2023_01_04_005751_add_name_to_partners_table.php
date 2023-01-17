@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::table('partners', function (Blueprint $table) {
             $table->string('razaoSocial');
             $table->string('CPNJ');
-            $table->foreign('address_id');
+            $table->string('address_id');
             $table->string('description');
             $table->string('opening_hours');
         });
@@ -30,7 +30,11 @@ return new class extends Migration
     public function down()
     {
         Schema::table('partners', function (Blueprint $table) {
-            //
+            $table->string('razaoSocial');
+            $table->string('CPNJ');
+            $table->string('address_id');
+            $table->string('description');
+            $table->string('opening_hours');
         });
     }
 };

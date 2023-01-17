@@ -21,6 +21,17 @@ class BrandController extends Controller
         return view('brands.index', compact('brands'));
     }
 
+    public function storeBrand (Brand $brands)
+    { 
+     /*   foreach ($brands as $brand) {
+            $brand[] = $this->model->create($brand);
+        }*/
+        $brand= $this->model->create($brands);
+       
+        
+        return view('brands.index', compact('brand'));
+    }
+
 }
  
 

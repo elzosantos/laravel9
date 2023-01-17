@@ -9,6 +9,15 @@ class Brand extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'fipe_id', 
+        'status'
+    ];
+    protected $casts = [
+        'created_at' => 'datetime',
+        'update_at' => 'datetime',
+    ];
     public function vehicles()
     {
         return $this->hasMany(Vehicle::class);
