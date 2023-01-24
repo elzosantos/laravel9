@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Listagem de Carros do Usuário : {{ $user->name }}")
+@section("title", "My Car - Gestão de Veicular")
 
 @section('content')
 
@@ -72,7 +72,7 @@
                     </table>
                     <div class="p-3">
                         <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            <a href="{{ route('cars.create', $user->id) }}">Novo Carro</a>
+                            <a href="{{ route('cars.create', $user->id) }}">Cadastrar</a>
                         </button>
                     </div>
                 </div>

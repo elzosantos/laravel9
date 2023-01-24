@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section("title", "Novo Carro : {$user->name}")
+@section("title", "My Car - Gestão de Veicular")
 @section('content') 
 
 <div class="flex flex-col">
@@ -8,7 +8,7 @@
         <!--Horizontal form-->
         <div class="mb-2 border-solid border-grey-light rounded border shadow-sm w-full md:w-1/2 lg:w-1/2">
             <div class="bg-gray-300 px-2 py-3 border-solid border-gray-400 border-b">
-                Adicionar Carro de : {{ $user->name }}
+                Cadastrar Veículo
             </div>
             <div class="p-3">
                 @include('includes.validations-form') 

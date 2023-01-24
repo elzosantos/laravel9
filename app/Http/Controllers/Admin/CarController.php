@@ -38,8 +38,7 @@ class CarController extends Controller
 
     public function associate(Request $request)
     {
-         
-      //  dd(AuthenticatedSessionController::class()->username);
+          
         if (!$user = $this->user->find(Auth::user()->id)) {
             return redirect()->back();
         }

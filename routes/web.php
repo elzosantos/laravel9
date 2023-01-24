@@ -11,6 +11,7 @@ use App\Http\Controllers\ConsultancyController;
 use App\Http\Controllers\FipeController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\MaintenanceController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PartnerController; 
 use Illuminate\Support\Facades\Route;
  
@@ -31,7 +32,7 @@ Route::get('/users/create', [UserController::class, 'create'])->name('users.crea
 Route::post('/users', [UserController::class, 'store'])->name('users.store');
 Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
 
-
+Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 Route::get('/brands', [BrandController::class, 'index'])->name('brands.index');
 
 Route::get('/business', [BusinessController::class, 'index'])->name('business.index');

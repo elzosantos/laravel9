@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Listagem do usuário')
+@section("title", "My Car - Gestão de Veicular")
 @section('content')
 
     <div class="flex flex-col">
