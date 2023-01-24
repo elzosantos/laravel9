@@ -229,13 +229,13 @@
                            
 
                             <div class="rounded rounded-t-lg overflow-hidden shadow max-w-xs my-3">
-                                <img src="https://i.imgur.com/w1Bdydo.jpg" alt="" class="w-full" />
+                                <img src="./images/login-new.webp"  alt="" class="w-full" />
                                 <div class="flex justify-center -mt-8">
-                                    <img src="https://i.imgur.com/8Km9tLL.jpg" alt=""
+                                    <img src="./images/consultants/consultant.png"  alt=""
                                         class="rounded-full border-solid border-white border-2 -mt-3">
                                 </div>
                                 <div class="text-center px-3 pb-6 pt-2">
-                                    <h3 class="text-black text-sm bold font-sans">Olivia Dunham</h3>
+                                    <h3 class="text-black text-sm bold font-sans">Cláudio Castro</h3>
                                     <p class="mt-2 font-sans font-light text-grey-700">Hello, i'm from another the other
                                         side!</p>
                                 </div>
@@ -252,13 +252,13 @@
                             </div>
                             <!--Top user 2-->
                             <div class="rounded rounded-t-lg overflow-hidden shadow max-w-xs my-3">
-                                <img src="https://i.imgur.com/w1Bdydo.jpg" alt="" class="w-full" />
+                                <img src="./images/login-new.webp"  alt="" class="w-full" />
                                 <div class="flex justify-center -mt-8">
-                                    <img src="https://i.imgur.com/8Km9tLL.jpg" alt=""
+                                    <img src="./images/consultants/consultant.png" alt=""
                                         class="rounded-full border-solid border-white border-2 -mt-3">
                                 </div>
                                 <div class="text-center px-3 pb-6 pt-2">
-                                    <h3 class="text-black text-sm bold font-sans">Olivia Dunham</h3>
+                                    <h3 class="text-black text-sm bold font-sans">Herman Schutz</h3>
                                     <p class="mt-2 font-sans font-light text-grey-dark">Hello, i'm from another the
                                         other
                                         side!</p>
@@ -276,13 +276,13 @@
                             </div>
                             <!--Top user 3-->
                             <div class="rounded rounded-t-lg overflow-hidden shadow max-w-xs my-3">
-                                <img src="https://i.imgur.com/w1Bdydo.jpg" alt="" class="w-full" />
+                                <img src="./images/login-new.webp"  alt="" class="w-full" />
                                 <div class="flex justify-center -mt-8">
-                                    <img src="https://i.imgur.com/8Km9tLL.jpg" alt=""
+                                    <img src="./images/consultants/consultant.png" alt=""
                                         class="rounded-full border-solid border-white border-2 -mt-3">
                                 </div>
                                 <div class="text-center px-3 pb-6 pt-2">
-                                    <h3 class="text-black text-sm bold font-sans">Olivia Dunham</h3>
+                                    <h3 class="text-black text-sm bold font-sans">Leandro Bessa</h3>
                                     <p class="mt-2 font-sans font-light text-grey-dark">Hello, i'm from another the
                                         other
                                         side!</p>

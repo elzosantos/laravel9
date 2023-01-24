@@ -63,6 +63,14 @@
                     class="bg-side-nav w-1/2 md:w-1/6 lg:w-1/6 border-r border-side-nav hidden md:block lg:block">
 
                     <ul class="list-reset flex flex-col">
+                        <li class=" w-full h-full py-3 px-2 border-b border-light-border bg-white">
+                            <div
+                               class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                                <i class="fas fa-tachometer-alt float-left mx-2"></i>
+                                <b>Área do cliente</b>
+                                
+                        </div>
+                        </li>
                         <li class=" w-full h-full py-3 px-2 border-b border-light-border">
                             <a href="{{ route('home.index') }}"
                                 class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
@@ -71,13 +79,7 @@
                             </a>
                         </li>
                         
-                        <li class=" w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="{{ route('users.index') }}"
-                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                                <i class="fab fa-wpforms float-left mx-2"></i>
-                                Usuários
-                            </a>
-                        </li>
+                        
                         <li class="w-full h-full py-3 px-2 border-b border-light-border">
                             <a href="{{ route('cars.associate') }}"
                                 class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
@@ -93,13 +95,7 @@
                             </a>
                         </li>
 
-                        <li class=" w-full h-full py-3 px-2 border-b border-light-border">
-                            <a href="{{ route('brands.index') }}"
-                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
-                                <i class="fab fa-wpforms float-left mx-2"></i>
-                                Lista Veículos
-                            </a>
-                        </li>
+                        
                        
                        
                         <li class="w-full h-full py-3 px-2 border-b border-light-border">
@@ -137,6 +133,43 @@
                                 Consultoria
                             </a>
                         </li>
+                        <li class=" w-full h-full py-3 px-2 border-b border-light-border bg-white">
+                            <div
+                               class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                                <i class="fas fa-tachometer-alt float-left mx-2"></i>
+                               <b>Administração</b> 
+                                
+                        </div>
+                        </li>
+                        <li class=" w-full h-full py-3 px-2 border-b border-light-border">
+                            <a href="{{ route('users.index') }}"
+                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                                <i class="fab fa-wpforms float-left mx-2"></i>
+                                Usuários
+                            </a>
+                        </li>
+                        <li class=" w-full h-full py-3 px-2 border-b border-light-border">
+                            <a href="{{ route('brands.index') }}"
+                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                                <i class="fab fa-wpforms float-left mx-2"></i>
+                                Lista Veículos
+                            </a>
+                        </li>
+                        <li class=" w-full h-full py-3 px-2 border-b border-light-border">
+                            <a href="{{ route('brands.index') }}"
+                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                                <i class="fab fa-wpforms float-left mx-2"></i>
+                                Assinaturas
+                            </a>
+                        </li>
+                        <li class=" w-full h-full py-3 px-2 border-b border-light-border">
+                            <a href="{{ route('brands.index') }}"
+                                class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                                <i class="fab fa-wpforms float-left mx-2"></i>
+                                Relatórios
+                            </a>
+                        </li>
+
                         <li class="w-full h-full py-3 px-2 border-b border-light-border">
                             <form action="/logout" method="POST">
                                 @csrf
@@ -147,7 +180,7 @@
                                 </button>
                             </form>
                         </li>
-
+                       
 
                     </ul>
 

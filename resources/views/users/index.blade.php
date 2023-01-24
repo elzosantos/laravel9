@@ -93,7 +93,7 @@
                         </div>
                     <div class="p-3">
                         <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            <a href="{{ route('users.create') }}">Novo</a>
+                            <a href="{{ route('users.create') }}">Cadastrar</a>
                         </button>
                     </div>
                 </div>

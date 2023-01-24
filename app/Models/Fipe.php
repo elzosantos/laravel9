@@ -53,7 +53,7 @@ class Fipe extends Model
     public function convertToBrand($arrayBrand)
     {
         foreach ($arrayBrand as $brand) {
-            $brands = Brand::create(['name' => $brand['Label'], 'fipe_id' => $brand['Value']]);
+            $brands = Brand::create(['name' => $brand['Label'], 'fipe_id' => $brand['Value'], 'status'=>'INCOMPLETED']);
         }
     }
 
@@ -66,7 +66,7 @@ class Fipe extends Model
             $modelos = $this->FipeJson("ConsultarModelos", array(
                 "codigoTabelaReferencia" => $this->getReference(),
                 "codigoTipoVeiculo" => 1,
-                "codigoMarca" => $marca['id'],
+                "codigoMarca" => $marca['fipe_id'],
             ));
             $arrModelos = json_decode(json_decode($modelos), true);
 

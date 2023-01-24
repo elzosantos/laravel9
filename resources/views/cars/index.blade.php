@@ -1,12 +1,9 @@
 @extends('layouts.app')
 
-@section("title", "My Car - Gestão de Veicular")
+@section('title', 'My Car - Gestão de Veicular')
 
 @section('content')
-
-    <div class="flex flex-col">
-
-
+    <div class="flex flex-col"> 
         <div class="flex flex-1  flex-col md:flex-row lg:flex-row mx-2">
             <div class="mb-2 border-solid border-gray-300 rounded border shadow-sm w-full">
                 <div class="bg-gray-200 px-2 py-3 border-solid border-gray-200 border-b">
