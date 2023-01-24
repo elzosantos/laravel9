@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section("title", "Editar Carro:   $user->name  ")
+@section("title", "My Car - Gestão de Veicular")
 @section('content')
 
 <div class="flex flex-col">
