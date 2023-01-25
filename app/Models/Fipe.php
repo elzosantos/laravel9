@@ -60,7 +60,7 @@ class Fipe extends Model
     public function getVehicles()
     {
         $countBrand = Brand::count();
-        for ($i = 0; $i <= $countBrand; $i++) {
+        for ($i = 0; $i <= $countBrand; $i++) { 
             $marca = Brand::where('status', '!=', 'COMPLETED')->first();
 
             $modelos = $this->FipeJson("ConsultarModelos", array(
