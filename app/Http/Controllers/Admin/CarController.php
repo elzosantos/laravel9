@@ -39,8 +39,11 @@ class CarController extends Controller
     public function associate(Request $request)
     {
           
-        if (!$user = $this->user->find(Auth::user()->id)) {
+        if (empty($this->user->find(Auth::user()->id))) {
             return redirect()->back();
+        }else{
+            $user = $this->user->find(Auth::user()->id);
+
         }
 
         $cars = $user->cars()

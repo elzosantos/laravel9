@@ -12,6 +12,7 @@ class Vehicle extends Model
     protected $fillable = [
         'name',
         'brand_id', 
+        'fipe_id'
     ];
     protected $casts = [
         'created_at' => 'datetime',

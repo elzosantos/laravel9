@@ -38,7 +38,7 @@ Route::get('/brands', [BrandController::class, 'index'])->name('brands.index');
 Route::get('/business', [BusinessController::class, 'index'])->name('business.index');
 Route::get('/consultants', [ConsultancyController::class, 'index'])->name('consultants.index');
 Route::get('/fipe', [FipeController::class, 'index'])->name('fipe.index');
-Route::get('/fipe/crawler', [FipeController::class, 'crawler'])->name('fipe.crawler');
+Route::get('/fipe/brands', [FipeController::class, 'brands'])->name('fipe.brands');
 Route::get('/fipe/vehicles', [FipeController::class, 'vehicles'])->name('fipe.vehicles');
 Route::get('/maintenance', [MaintenanceController::class, 'index'])->name('maintenance.index');
 Route::get('/history', [HistoryController::class, 'index'])->name('histories.index');

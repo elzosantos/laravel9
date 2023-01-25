@@ -17,16 +17,27 @@ class FipeController extends Controller
     }
     public function index()
     {
-        return view('fipe.index');
+        return view('fipe.crawler');
     }
-    public function crawler()
+    public function brands()
     { 
         $this->modelFipe->getBrands();
-        return view('fipe.crawler');
+        return view('fipe.index');
     }
     public function vehicles()
     { 
         $this->modelFipe->getVehicles();
-        return view('fipe.vehicles'); 
+        return view('fipe.index'); 
+    }
+
+    public function vehiclesYear()
+    {
+
+    }
+
+    public function vehiclesPrice()
+    {
+
+
     }
 }

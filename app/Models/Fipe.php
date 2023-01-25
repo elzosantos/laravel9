@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Brand;
+use App\Enums\CarEnum;
 
 class Fipe extends Model
 {
@@ -60,8 +61,8 @@ class Fipe extends Model
     public function getVehicles()
     {
         $countBrand = Brand::count();
-        for ($i = 0; $i <= $countBrand; $i++) { 
-            $marca = Brand::where('status', '!=', 'COMPLETED')->first();
+        for ($i = 0; $i <= 20; $i++) { 
+            $marca = Brand::where('status', '=', 'INCOMPLETED')->first();
 
             $modelos = $this->FipeJson("ConsultarModelos", array(
                 "codigoTabelaReferencia" => $this->getReference(),
@@ -74,10 +75,27 @@ class Fipe extends Model
 
 
                 foreach ($arrModelos['Modelos'] as $models) {
-                    $brands = Vehicle::create(['name' => $models['Label'], 'brand_id' => $marca['id']]);
+                    $brands = Vehicle::create(['name' => $models['Label'], 'brand_id' => $marca['id'], 'fipe_id' => $models['Value']]);
                 }
             }
             $re = Brand::where('id', $marca['id'])->update(['status' => 'COMPLETED']);
         }
+    }
+
+    public function getVehiclesYear()
+    {
+
+        $ano_modelo = FipeJson("ConsultarAnoModelo", array(
+            "codigoTabelaReferencia" => $this->getReference(),
+            "codigoTipoVeiculo" => CarEnum::CAR,
+            "codigoMarca" => 21,
+            "codigoModelo" => 4925
+          ));
+    }
+
+    public function getVehiclesPrice()
+    {
+
+
     }
 }

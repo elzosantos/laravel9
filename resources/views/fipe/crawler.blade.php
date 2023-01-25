@@ -27,6 +27,7 @@ function FipeJson($resource, $data = null) {
 
 // $tabela_referencia = FipeJson("ConsultarTabelaDeReferencia");
 // echo  json_decode($tabela_referencia);
+/*
 $marcas = FipeJson("ConsultarMarcas", array(
   "codigoTabelaReferencia" => 293,
   "codigoTipoVeiculo" => 1
@@ -43,15 +44,15 @@ foreach (  $arrayMarcas as $marca ) {
   
  
 }
+*/
 
-/*
 $modelos = FipeJson("ConsultarModelos", array(
-  "codigoTabelaReferencia" => 231,
+  "codigoTabelaReferencia" => 293,
   "codigoTipoVeiculo" => 1,
-  "codigoMarca" => 26,
+  "codigoMarca" => 21,
 ));
-// echo json_decode($modelos);*/
-
+ echo json_decode($modelos);
+/*
 $ano_modelo = FipeJson("ConsultarAnoModelo", array(
   "codigoTabelaReferencia" => 231,
   "codigoTipoVeiculo" => 1,
@@ -80,5 +81,5 @@ $valor_veiculo = FipeJson("ConsultarValorComTodosParametros", array(
   "codigoTipoCombustivel" => 1,
   "anoModelo" => 2011,
   "tipoConsulta" => "tradicional"
-));
+));*/
 // echo json_decode($valor_veiculo);
