@@ -54,31 +54,35 @@ class Fipe extends Model
     public function convertToBrand($arrayBrand)
     {
         foreach ($arrayBrand as $brand) {
-            $brands = Brand::create(['name' => $brand['Label'], 'fipe_id' => $brand['Value'], 'status'=>'INCOMPLETED']);
+            $brands = Brand::create(['name' => $brand['Label'], 'fipe_id' => $brand['Value'], 'status' => 'INCOMPLETED']);
         }
     }
 
     public function getVehicles()
     {
         $countBrand = Brand::count();
-        for ($i = 0; $i <= 20; $i++) { 
+        for ($i = 0; $i <= 20; $i++) {
             $marca = Brand::where('status', '=', 'INCOMPLETED')->first();
+            if (!empty($marca)) {
+                $modelos = $this->FipeJson("ConsultarModelos", array(
+                    "codigoTabelaReferencia" => $this->getReference(),
+                    "codigoTipoVeiculo" => 1,
+                    "codigoMarca" => $marca['fipe_id'],
+                ));
+                $arrModelos = json_decode(json_decode($modelos), true);
 
-            $modelos = $this->FipeJson("ConsultarModelos", array(
-                "codigoTabelaReferencia" => $this->getReference(),
-                "codigoTipoVeiculo" => 1,
-                "codigoMarca" => $marca['fipe_id'],
-            ));
-            $arrModelos = json_decode(json_decode($modelos), true);
-
-            if (!empty($arrModelos['Modelos'])) {
+                if (!empty($arrModelos['Modelos'])) {
 
 
-                foreach ($arrModelos['Modelos'] as $models) {
-                    $brands = Vehicle::create(['name' => $models['Label'], 'brand_id' => $marca['id'], 'fipe_id' => $models['Value']]);
+                    foreach ($arrModelos['Modelos'] as $models) {
+                        $brands = Vehicle::create(['name' => $models['Label'], 'brand_id' => $marca['id'], 'fipe_id' => $models['Value']]);
+                    }
                 }
+                $re = Brand::where('id', $marca['id'])->update(['status' => 'COMPLETED']);
+            } else {
+                echo 'Acabou porra!';
             }
-            $re = Brand::where('id', $marca['id'])->update(['status' => 'COMPLETED']);
+
         }
     }
 
@@ -90,12 +94,10 @@ class Fipe extends Model
             "codigoTipoVeiculo" => CarEnum::CAR,
             "codigoMarca" => 21,
             "codigoModelo" => 4925
-          ));
+        ));
     }
 
     public function getVehiclesPrice()
     {
-
-
     }
 }
