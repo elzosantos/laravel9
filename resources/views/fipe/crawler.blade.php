@@ -45,22 +45,21 @@ foreach (  $arrayMarcas as $marca ) {
  
 }
 */
-
+/*
 $modelos = FipeJson("ConsultarModelos", array(
   "codigoTabelaReferencia" => 293,
   "codigoTipoVeiculo" => 1,
   "codigoMarca" => 21,
 ));
- echo json_decode($modelos);
-/*
+ echo json_decode($modelos */
 $ano_modelo = FipeJson("ConsultarAnoModelo", array(
-  "codigoTabelaReferencia" => 231,
+  "codigoTabelaReferencia" => 293,
   "codigoTipoVeiculo" => 1,
-  "codigoMarca" => 26,
-  "codigoModelo" => 4925
+  "codigoMarca" => 21,
+  "codigoModelo" => 4826
 ));
-// echo json_decode($ano_modelo);
-
+ echo json_decode($ano_modelo);
+/*
 $modelos_do_ano = FipeJson("ConsultarModelosAtravesDoAno", array(
   "codigoTabelaReferencia" => 231,
   "codigoTipoVeiculo" => 1,
